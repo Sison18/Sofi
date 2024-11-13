@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+  background: #f7f7f7;
+}
+.back-btn {
+  width: 42   px;        
+  height: 35px;          
+  font-size: 10px;        
+  color: white;          
+  background-color: #b178a1;
+  border: none;
+  border-radius: 50%;    
+  cursor: pointer;
+  position: absolute;
+  top: 4%;  
+  right: 20px;
+  transition: background-color 0.3s ease;
+
+}
+
+.back-btn:hover {
+  background-color: #181a18;
+}
+
+.back-btn:active {
+  background-color: #3e8e41;
+}
+header {
+  background: #FBCFE8 ;
+  padding: 10px;
+}
+nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  text-align: center;
+}
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 15px;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  background-color: #9D174D; /* Custom color */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover {
+  color: #9D174D;
+}
+
+nav a:hover::before {
+  width: 60%;
+}
+nav h1 {
+  text-transform: uppercase;
+  line-height: 1em;
+}
+nav h1 div:first-child {
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+nav h1 div:last-child {
+  font-weight: 400;
+}
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 250px;
+  gap: 30px;
+}
+main div {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 6px;
+  border: 16px solid #fff;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.05);
+}
+main img {
+  min-width: 100%;
+  height: 100%;
+}
+main .short {
+  grid-row: span 1;
+  background-color: #FCE7F3;
+  padding: 10px;
+}
+main .tall {
+  grid-row: span 2;
+}
+
+@media screen and (max-width: 960px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  main {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+  nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  nav h1{
+    grid-column: 1 / span 4;
+    grid-row: 1;
+  }  
+}

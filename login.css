@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FBCFE8;
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #FDF2F8;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.image {
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    height: 350px;
+}
+.image img {
+    width: 100%;
+    height: auto;
+}
+.keypad {
+    text-align: center;
+}
+.display {
+    font-size: 1.2em;
+    color: #4d4d4d;
+    margin-bottom: 20px;
+    height: 1.2em;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #d0c7ec;
+    color: #4d4d4d;
+    font-size: 1.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.button:hover {
+    background-color: #b7a7d3;
+}
+.submit-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #F9A8D4;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.submit-button:hover {
+    background-color: #3a3a3a;
+}
+#message {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+}
+#spotify{
+    position: absolute;
+    top: 700px;
+}

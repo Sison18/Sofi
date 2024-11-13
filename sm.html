@@ -1,0 +1,59 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Special Message</title>
+        <link rel="stylesheet" href="sm.css">
+        <link rel="icon" href="img9.jpg">
+    </head>
+
+    <body>
+        <main>
+            <video width="640" height="360" controls loop autoplay hidden >
+                <source src="Forevermore.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button class="back-btn" onclick="window.history.back()">Back</button>
+            <div class="panel welcome">
+            <div>
+                <h1>Greetings ♡⸜(ˆᗜˆ˵ )⸝♡</h1>
+                <div class="typing-effect" id="message"></div>
+
+                <script>
+                    const text = `Maligayang kaarawan mahal, ngayong araw na ito, Una sa lahat, gusto kong sabihin kung gaano kita kamahal. Sa bawat araw na lumilipas, mas lalo pang lumalim ang pagmamahal ko sayo. Sa bawat ngiti mo, sa bawat yakap mo, sa bawat oras na kasama kita. Enjoy your day today mahal huwag malulungkot ngayon ah dapat smile smile lang ˶ᵔ ᵕ ᵔ˶ huwag kang iiyak habang binabasa ito ah (｡- .•) HAHAHHAHAHA joke lang. Naway maraming pagpapala at mga magagandang pangyayari at opportunity na dumating sa buhay mo mahal. More Birthday to Come, May God Bless Your Day~ I LOVE YOU MY SOFI, Mahal na Mahal na Mahal kita ^_^
+                     `;
+                    const messageElement = document.getElementById("message");
+            
+                    let index = 0;
+                    
+                    function typeEffect() {
+                        if (index < text.length) {
+                            messageElement.innerHTML += text[index];
+                            index++;
+                            setTimeout(typeEffect, 100); // Adjust the speed here (in milliseconds)
+                        }
+                    }
+            
+                    typeEffect();
+                </script>
+                <footer>From your Ichan</footer>
+            </div>
+            </div>
+            <div class="panel about">
+            <img src="sm1.jpg" alt="main pic">
+            <div class="text">
+                <h2>◝(ᵔᵕᵔ)◜</h2>
+                <p>To the one who makes everything brighter, may today bring you as much joy as you bring to me every day. Happy Birthday, love!</p>
+            </div>
+            </div>
+            <div class="panel photos">
+            <div class="text">
+                <h2>-`♡´-  </h2>
+                <p>May today be filled with laughter, dreams, and a whole lot of love. You deserve all the happiness in the world.</p>
+            </div>
+            <img src="sm2.jpg" alt="landscape pic">
+            </div>
+        </main>
+    </body>
+</html>

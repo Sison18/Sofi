@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sofi</title>
+        <link rel="icon" href="img9.jpg">
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        
+        <iframe id="spotify" style="border-radius:12px" src="https://open.spotify.com/embed/track/0PDWWG0aWsPpDOM3sJmLe6?utm_source=generator&theme=0" width="20%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <div class="container">
+        <div class="image">
+            <img id="image" src="img4.jpg" alt="Avatar" />
+        </div>
+        <div class="keypad">
+            <div id="display" class="display">Enter Passcode</div>
+            <div class="buttons">
+                <!-- Keypad buttons -->
+                <div class="button" onclick="third('1')">1</div>
+                <div class="button" onclick="fifth('2')">2</div>
+                <div class="button" onclick="appendNumber('3')">3</div>
+                <div class="button" onclick="sixth('4')">4</div>
+                <div class="button" onclick="appendNumber('5')">5</div>
+                <div class="button" onclick="appendNumber('6')">6</div>
+                <div class="button" onclick="appendNumber('7')">7</div>
+                <div class="button" onclick="fourth('8')">8</div>
+                <div class="button" onclick="second('9')">9</div>
+                <div class="button" onclick="clearPasscode()">.</div>
+                <div class="button" onclick="first('0')">0</div>
+                <div class="button" onclick="clearPasscode()">C</div>
+            </div>
+            <!-- Submit button -->
+            <button class="submit-button" onclick="checkPasscode()">Submit</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script>
+        let passcode = "";
+        const correctPasscode = "09182024";  
+        const display = document.getElementById("display");
+        const message = document.getElementById("message");
+
+        function appendNumber(num) {
+            if (passcode.length < 8) {  
+                passcode += num;
+                updateDisplay();
+            }
+        }
+
+        function first(num){
+            if (passcode.length < 8) {  
+                passcode += num;
+                updateDisplay();
+            }
+            const img = document.getElementById('image');
+            img.src = 'img7.jpg';  
+        }
+
+        function second(num){
+            if (passcode.length < 8) {  
+                passcode += num;
+                updateDisplay();
+            }
+            const img = document.getElementById('image');
+            img.src = 'img2.jpg';  
+        }
+
+        function third(num){
+            if (passcode.length < 8) {  
+                passcode += num;
+                updateDisplay();
+            }
+            const img = document.getElementById('image');
+            img.src = 'img3.jpg';  
+        }
+
+        function fourth(num){
+            if (passcode.length < 8) {  
+                passcode += num;
+                updateDisplay();
+            }
+            const img = document.getElementById('image');
+            img.src = 'img8.jpg';  
+        }
+
+        function fifth(num){
+            if (passcode.length < 8) {  
+                passcode += num;
+                updateDisplay();
+            }
+            const img = document.getElementById('image');
+            img.src = 'img9.jpg';  
+        }
+
+        function sixth(num){
+            if (passcode.length < 8) {  
+                passcode += num;
+                updateDisplay();
+            }
+            const img = document.getElementById('image');
+            img.src = 'img1.jpg';  
+        }
+
+        function updateDisplay() {
+            display.textContent = "*".repeat(passcode.length) || "Enter Passcode";  
+        }
+
+        function clearPasscode() {
+            passcode = "";
+            message.textContent = "";  
+            updateDisplay();
+        }
+
+        function checkPasscode() {
+            if (passcode === correctPasscode) {
+                window.location.href = "main.html";  
+            } else {
+                message.textContent = "Incorrect passcode. Try again.";
+                clearPasscode();
+            }
+        }
+    </script>
+
+    </body>
+</html>
