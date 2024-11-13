@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <link rel="icon" href="img9.jpg">
+    <style>
+        body{
+            margin: 0;
+            background-color: #DDD6FE;
+        }
+        .back-btn {
+    width: 35px;        
+    height: 30px;          
+    font-size: 10px;        
+    color: white;          
+    background-color: #b178a1;
+    border: none;
+    border-radius: 50%;    
+    cursor: pointer;
+    position: absolute;
+    top: 20px;  
+    left: 20px;
+    transition: background-color 0.3s ease;
+  z-index: 1;
+  }
+  
+  .back-btn:hover {
+    background-color: #181a18;
+  }
+  
+  .back-btn:active {
+    background-color: #3e8e41;
+  }
+  video {
+    position: relative;
+    top: 200px;
+    left: 30%;
+  }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="window.history.back()">Back</button>
+    <video controls width="800">
+        <source src="me.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+</body>
+</html>
